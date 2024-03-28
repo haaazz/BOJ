@@ -1,6 +1,9 @@
 import sys
+input=sys.stdin.readline
 
-sys.setrecursionlimit(400000)
+# import sys
+
+# sys.setrecursionlimit(400000)
 
 # 모든 점을 방문
 # 방문한 뒤에 이동할 수 있는 모든 경우의 수 재귀로 구현 -> DFS
@@ -12,7 +15,7 @@ def panda(y, x):
     if dp[y][x] != 0:
         return dp[y][x]
 
-    for dy, dx in [[0,1],[0,-1],[1,0],[-1,0]]:
+    for dy, dx in [[0,-1],[1,0],[-1,0],[0,1]]:
         ny = y + dy
         nx = x + dx
 
